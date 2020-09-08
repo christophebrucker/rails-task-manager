@@ -3,7 +3,7 @@
     <h1><input <%= "checked" if @task.completed %> type="checkbox" name=""><%= @task.title %></h1>
     <p> <%=@task.details%> </p>
   </div>
-  <%= link_to "Edit the task", task_edit_path(@task.id) %>
+  <%= link_to "Edit the task", edit_task_path(@task.id) %>
   <%= link_to "Delete #{@task.title}",
             task_path(@task),
             method: :delete,
